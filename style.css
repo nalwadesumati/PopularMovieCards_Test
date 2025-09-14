@@ -1,0 +1,87 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+
+header {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #e50914;
+  padding: 20px;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #000000, #141414); 
+  border-radius: 8px;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 10px;
+  font-family: sans-serif;
+}
+
+
+
+
+
+body{
+	background-image: url("https://wallpapercave.com/wp/wp4056410.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+#movieContainer .card{
+	height:100%;
+	width:100%;
+	overflow:hidden;
+}
+
+.movieCard img{
+	height:100%;
+	width:100%;
+	object-fit:cover;
+}
+.movieCard{
+	height:450px;
+	overflow:hidden;
+	position:relative;
+}
+.titleInfo{
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	background-color:darkorange;
+	color:white;
+	padding:10px;
+	white-space:nowarp;
+	text-overflow:ellipsis;
+	font-family:ui-monospace;
+	
+}
+
+.overView{
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 50%;
+    background-color: lightgreen;
+    height: 50%;
+    width: 100%;
+	opacity:0;
+	padding:20px;
+    transform: scale(0);
+	transition:all 0.5s ease-in-out;
+}
+.badge-success{
+	color: #fff;
+	font-weight: bold;
+	padding: 4px 10px;
+	padding: 5px 5px 5px 5px;
+	font-size: 14px;
+	margin-bottom:10px;
+	
+}
+
+.movieCard:is(:hover, :active, :focus) .overView{
+	transform:scale(1);
+	opacity:0.8;
+}
